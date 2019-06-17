@@ -63,7 +63,7 @@ class ContactsController extends Controller
          * !! Getting Geocode from Google Map API
          */
         $address = $contact->street_name . ', ' . $contact->city . ', ' . $contact->state . ' ' . $contact->zip;
-        $client = new Client();
+        $client = new Client(['verify' => false]);
         $api_key = env('GOOGLE_MAPS_API_KEY');
         $result = $client->post('https://maps.googleapis.com/maps/api/geocode/json?address=' . $address . '&key=' . $api_key)->getBody();
         $json = json_decode($result);
