@@ -7,7 +7,6 @@
 --}}
 
     @csrf
-    {{-- {{dd(old('first_name'))}} --}}
     <div class="form-group">
         <label for="first_name">First Name</label>
         <input name="first_name" type="input" class="form-control {{ $errors->has('first_name') ? ' is-invalid' : '' }}" name="" value="{{ old('first_name') ?? $contact->first_name}}" id="first_name"  >

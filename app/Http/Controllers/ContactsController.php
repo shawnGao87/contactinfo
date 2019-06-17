@@ -134,7 +134,7 @@ class ContactsController extends Controller
             'phone' => [
                 'nullable',
                 'string',
-                'regex:/^(\+*\d{1,4}[\s-]*)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/'
+                'regex:/^(\+*\d{1,4}[\s-]*)*\(*\d{3}\)*[\s.-]*\d{3}[\s.-]*\d{4}$/'
             ],
             'birthday' => 'date|nullable|before:tomorrow|after:1000-01-01',
             'street_address' => [
@@ -154,7 +154,7 @@ class ContactsController extends Controller
             ],
             'zip' => [
                 'nullable',
-                'regex:/\d{5}([\s-]+\d{4})?$/'
+                'regex:/\d{5}([\s-]+\d{4})*$/'
             ],
         ]);
     }

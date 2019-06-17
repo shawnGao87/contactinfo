@@ -4,14 +4,16 @@
 
 # Setup
 
--   `git clone https://github.com/shawnGao87/contactinfor.git'
+-   `git clone https://github.com/shawnGao87/contactinfor.git`
 
 -   `cd contactinfo`
 -   `npm install`
 -   `composer install`
 -   `cp .env.example .env`
 -   create database / schema named contactinfo
--   change
+-
+
+CHANGE
 
 ```
 DB_DATABASE=laravel
@@ -32,6 +34,8 @@ ADD
 
 -   `php artisan migrate`
 
--`composer dump-autoload` -`php artisan db:seed --class=ContactTableSeeder` It creates 50 dummy contacts each time
+-   `composer dump-autoload`
 
-make sure .babelrc is there
+-   `php artisan db:seed --class=ContactTableSeeder` It creates 50 dummy contacts each time
+-   `npm run prod`
+-   `php artisane serve`
