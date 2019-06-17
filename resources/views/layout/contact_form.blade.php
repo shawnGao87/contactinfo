@@ -74,6 +74,7 @@
         <label for="state">State</label>
         <select class="form-control {{ $errors->has('state') ? ' is-invalid' : '' }}"  id="state" >
             <option value="select state" disabled>Select Sate</option>
+            <option value="" ></option>
             @foreach ($states as $state_abrv => $state_name)
                 <option value="{{$state_name}}" {{$contact->state == $state_name ? 'selected': ''}}>{{$state_name}} </option>
             @endforeach
