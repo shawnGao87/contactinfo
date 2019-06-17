@@ -1,6 +1,7 @@
 # Notes
 
 -   Front-end is a mixture of React and Blade. The reason why I went with React is that the I wanted to use one of the datatable libraries to achieve `sort`, `search`, `filter`, `pagination`, etc. features. It's easier in my opinion.
+-   Need Node.js and composer installed
 
 # Setup
 
@@ -9,9 +10,9 @@
 -   `cd contactinfo`
 -   `npm install`
 -   `composer install`
+-   Create database / schema named contactinfo
 -   `cp .env.example .env`
--   create database / schema named contactinfo
--
+-   Edit `.env`
 
 CHANGE
 
@@ -38,4 +39,5 @@ ADD
 
 -   `php artisan db:seed --class=ContactTableSeeder` It creates 50 dummy contacts each time
 -   `npm run prod`
--   `php artisane serve`
+-   `php artisan key:generate`
+-   `php artisan serve`
